@@ -6,12 +6,14 @@
 int main(int argc,char *argv[]) {
 
 
+    pid_t first_child;
+    pid_t second_child;
 
     // Firstly, locate the Pipe symbol
     int pipe_index;
     for(int i=0 ; i<argc ; i++) {
         if(strcmp("|",argv[i]) == 0) {
-           pipe_index = i;
+            pipe_index = i;
         }
     }
 
@@ -40,10 +42,10 @@ int main(int argc,char *argv[]) {
 
     int fd[2];
     pipe(fd);
-    pid_t pid = fork();
+    first_child = fork();
 
     // Child Process 1
-    if(pid == 0) {
+    if(first_child == 0) {
         close(fd[0]);
         dup2(fd[1],STDOUT_FILENO);
         execvp(first_command,  command1_arguments);
@@ -51,20 +53,22 @@ int main(int argc,char *argv[]) {
 
     else {
 
-        pid = fork();
+        second_child = fork();
 
         // Child Process 2 from same parent
-        if(pid == 0) {
+        if(second_child == 0) {
             close(fd[1]);
             dup2(fd[0],STDIN_FILENO);
             execvp(second_command,  command2_arguments);
         }
 
-        // Parent Process
+            // Parent Process
         else {
-            // Wait until children gets finished
-            wait(NULL);
-
+            close(fd[0]);
+            close(fd[1]);
+            // Wait until all children gets finished
+            waitpid(first_child,NULL,0);
+            waitpid(second_child,NULL,0);
         }
 
     }
