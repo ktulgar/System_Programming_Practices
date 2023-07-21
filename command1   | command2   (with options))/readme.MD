@@ -1,6 +1,6 @@
 I found this exercise on a website called emertxe.com . I wanted to make for practice. 
 <p>
-    to visit website <a href="https://www.emertxe.com/embedded-systems/linux-internals/li-assignments/">Click</a>!
+    There are great exercises on website. To visit website <a href="https://www.emertxe.com/embedded-systems/linux-internals/li-assignments/">Click</a>!
 <p>
 
 
