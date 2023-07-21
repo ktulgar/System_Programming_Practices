@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <string.h>
+#include <stdio.h>
 
 
 int main(int argc,char *argv[]) {
@@ -69,6 +70,7 @@ int main(int argc,char *argv[]) {
             // Wait until all children gets finished
             waitpid(first_child,NULL,0);
             waitpid(second_child,NULL,0);
+           // printf("Child processes got finished\n");
         }
 
     }
