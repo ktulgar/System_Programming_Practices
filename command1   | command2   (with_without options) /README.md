@@ -17,3 +17,6 @@ Requirements:
         <li>Second child executes second command (after ‘|’) will reads I/p from first cmd.</li>
         <li>Parent will wait for both child process to finish.</li>
 </ol>
+
+## Demo 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MKFcvRfKaZo/0.jpg)](https://youtu.be/MKFcvRfKaZo)
