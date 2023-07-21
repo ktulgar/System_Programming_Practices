@@ -4,7 +4,7 @@ I found this exercise on a website called emertxe.com . I wanted to make for pra
 <p>
 
 
-Objective:
+<span style="color:blue">some *This is Blue italic.* text</span>
 <ul>
 	<li>To understand working of pipe between two process.</li>
 </ul>
