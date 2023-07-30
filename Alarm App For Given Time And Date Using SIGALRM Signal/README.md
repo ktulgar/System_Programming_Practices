@@ -15,4 +15,4 @@ Objectives:
 
 
 ## Demo 
-[![IMAGE ALT TEXT HERE](https://youtu.be/RlRYENqnY5w/0.jpg)](https://youtu.be/RlRYENqnY5w)
+[![IMAGE ALT TEXT HERE](https://img.youtu.be/RlRYENqnY5w/0.jpg)](https://youtu.be/RlRYENqnY5w)
